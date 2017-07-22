@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E5870DFC-6257-4425-99C2-8DB7EDBCDDA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{A1433585-CBDB-4783-8D22-3D28AF95D726}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ui", "Ui", "{0B280DDD-745F-4011-ADA7-08BC1A06CA36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{8722DCBD-F5E1-4B0A-8692-3ADF9974F4E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClanScape.Common", "ClanScape.Common\ClanScape.Common.csproj", "{7D5DCF08-8B68-47C6-A548-03FEC4643540}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D5DCF08-8B68-47C6-A548-03FEC4643540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5DCF08-8B68-47C6-A548-03FEC4643540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5DCF08-8B68-47C6-A548-03FEC4643540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5DCF08-8B68-47C6-A548-03FEC4643540}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D5DCF08-8B68-47C6-A548-03FEC4643540} = {E5870DFC-6257-4425-99C2-8DB7EDBCDDA7}
+	EndGlobalSection
+EndGlobal
