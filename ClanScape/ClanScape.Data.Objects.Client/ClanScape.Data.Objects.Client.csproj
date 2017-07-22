@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6D801C86-80CE-4A6F-854F-6632532A4D8C}</ProjectGuid>
+    <ProjectGuid>{A0CA71B6-187B-4988-80D1-00DF1C8710EF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClanScape.Data.Core</RootNamespace>
-    <AssemblyName>ClanScape.Data.Core</AssemblyName>
+    <RootNamespace>ClanScape.Data.Objects.Client</RootNamespace>
+    <AssemblyName>ClanScape.Data.Objects.Client</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,7 +43,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
+    <Folder Include="Objects\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
