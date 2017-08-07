@@ -16,7 +16,7 @@ namespace ClanScape.Data.Objects.Tables
         {
             get
             {
-                return SkillType.CalculateCurrentLevel(CurrentXP);
+                return SkillType.CalculatePercentageToLevel(CurrentXP);
             }
             private set { }
         }
