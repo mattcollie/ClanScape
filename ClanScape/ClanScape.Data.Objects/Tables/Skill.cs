@@ -11,26 +11,6 @@ namespace ClanScape.Data.Objects.Tables
 
         public int CurrentXP { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public double PercentageToLevel
-        {
-            get
-            {
-                return SkillType.CalculatePercentageToLevel(CurrentXP);
-            }
-            private set { }
-        }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public int CurrentLevel
-        {
-            get
-            {
-                return SkillType.CalculateCurrentLevel(CurrentXP);
-            }
-            private set { }
-        }
-        
         public int SkillTypeId { get; set; }
 
         [ForeignKey("SkillTypeId")]
