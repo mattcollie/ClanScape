@@ -10,6 +10,8 @@ namespace ClanScape.Data.Objects.Tables
         [Key]
         public long Id { get; set; }
 
+        public string PlayerName { get; set; }
+
         public DateTime CreatedAt { get; set; }
 
         public Guid PlayerId { get; set; }

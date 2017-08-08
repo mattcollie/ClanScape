@@ -12,6 +12,8 @@ namespace ClanScape.Data.Objects.Tables
         public Guid Id { get; set; }
         
         public int QuestPoints { get; set; }
+
+        public DateTime CreatedAt { get; set; }
         
         public ICollection<Name> Names { get; set; }
 
