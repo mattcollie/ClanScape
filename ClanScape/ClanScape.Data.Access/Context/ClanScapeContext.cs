@@ -22,7 +22,11 @@ namespace ClanScape.Data.Access.Context
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<Player>().ToTable("Players");
             modelBuilder.Entity<SkillType>().ToTable("SkillTypes");
+            modelBuilder.Entity<Skill>().ToTable("Skills");
+            modelBuilder.Entity<Name>().ToTable("Names");
+            modelBuilder.Entity<AdventureLog>().ToTable("AdventureLogs");
         }
 
         public new virtual IDbSet<T> Set<T>() where T : class
@@ -34,7 +38,11 @@ namespace ClanScape.Data.Access.Context
 
         #region Entities
 
+        public virtual IDbSet<Player> Players { get; set; }
         public virtual IDbSet<SkillType> SkillTypes { get; set; }
+        public virtual IDbSet<Skill> Skills { get; set; }
+        public virtual IDbSet<Name> Names { get; set; }
+        public virtual IDbSet<AdventureLog> AdventureLogs { get; set; }
 
         #endregion
     }

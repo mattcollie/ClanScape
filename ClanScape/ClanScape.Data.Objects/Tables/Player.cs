@@ -18,5 +18,7 @@ namespace ClanScape.Data.Objects.Tables
         public ICollection<Name> Names { get; set; }
 
         public ICollection<Skill> Skills { get; set; }
+
+        public ICollection<AdventureLog> AdventureLogs { get; set; }
     }
 }
