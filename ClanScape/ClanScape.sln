@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E5870DFC-6257-4425-99C2-8DB7EDBCDDA7}"
 EndProject
@@ -20,6 +20,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClanScape.Data.Objects.Client", "ClanScape.Data.Objects.Client\ClanScape.Data.Objects.Client.csproj", "{A0CA71B6-187B-4988-80D1-00DF1C8710EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClanScape.Services.Player", "ClanScape.Services.Player\ClanScape.Services.Player.csproj", "{F8E1B62F-2B5A-4FCC-8C7E-1F33F70AB576}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClanScape.Web.Api.Repository", "ClanScape.Web.Api.Repository\ClanScape.Web.Api.Repository.csproj", "{2ED08F86-0376-420C-96A5-FE952652411D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClanScape.Web.Api.Service", "ClanScape.Web.Api.Service\ClanScape.Web.Api.Service.csproj", "{E07EF854-4BB3-480D-ADFF-8C1B5B5FB8DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClanScape.Web.Api.Factory", "ClanScape.Web.Api.Factory\ClanScape.Web.Api.Factory.csproj", "{611A20C1-739D-4B78-A91E-7C2948D1432B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClanScape.Web.Api.Common", "ClanScape.Web.Api.Common\ClanScape.Web.Api.Common.csproj", "{C344E819-4711-4EE3-BAD4-FAAF4D8D95C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClanScape.Web.Api", "ClanScape.Web.Api\ClanScape.Web.Api.csproj", "{0F7A9EDD-C49D-4ECF-AE07-5918BE273B70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +57,26 @@ Global
 		{F8E1B62F-2B5A-4FCC-8C7E-1F33F70AB576}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8E1B62F-2B5A-4FCC-8C7E-1F33F70AB576}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8E1B62F-2B5A-4FCC-8C7E-1F33F70AB576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED08F86-0376-420C-96A5-FE952652411D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED08F86-0376-420C-96A5-FE952652411D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED08F86-0376-420C-96A5-FE952652411D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED08F86-0376-420C-96A5-FE952652411D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E07EF854-4BB3-480D-ADFF-8C1B5B5FB8DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07EF854-4BB3-480D-ADFF-8C1B5B5FB8DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07EF854-4BB3-480D-ADFF-8C1B5B5FB8DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07EF854-4BB3-480D-ADFF-8C1B5B5FB8DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{611A20C1-739D-4B78-A91E-7C2948D1432B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{611A20C1-739D-4B78-A91E-7C2948D1432B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{611A20C1-739D-4B78-A91E-7C2948D1432B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{611A20C1-739D-4B78-A91E-7C2948D1432B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C344E819-4711-4EE3-BAD4-FAAF4D8D95C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C344E819-4711-4EE3-BAD4-FAAF4D8D95C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C344E819-4711-4EE3-BAD4-FAAF4D8D95C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C344E819-4711-4EE3-BAD4-FAAF4D8D95C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F7A9EDD-C49D-4ECF-AE07-5918BE273B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F7A9EDD-C49D-4ECF-AE07-5918BE273B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F7A9EDD-C49D-4ECF-AE07-5918BE273B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F7A9EDD-C49D-4ECF-AE07-5918BE273B70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,5 +87,10 @@ Global
 		{3657CD77-E703-4B98-9013-AD0BBA7F345B} = {E5870DFC-6257-4425-99C2-8DB7EDBCDDA7}
 		{A0CA71B6-187B-4988-80D1-00DF1C8710EF} = {E5870DFC-6257-4425-99C2-8DB7EDBCDDA7}
 		{F8E1B62F-2B5A-4FCC-8C7E-1F33F70AB576} = {8722DCBD-F5E1-4B0A-8692-3ADF9974F4E5}
+		{2ED08F86-0376-420C-96A5-FE952652411D} = {A1433585-CBDB-4783-8D22-3D28AF95D726}
+		{E07EF854-4BB3-480D-ADFF-8C1B5B5FB8DA} = {A1433585-CBDB-4783-8D22-3D28AF95D726}
+		{611A20C1-739D-4B78-A91E-7C2948D1432B} = {A1433585-CBDB-4783-8D22-3D28AF95D726}
+		{C344E819-4711-4EE3-BAD4-FAAF4D8D95C8} = {A1433585-CBDB-4783-8D22-3D28AF95D726}
+		{0F7A9EDD-C49D-4ECF-AE07-5918BE273B70} = {A1433585-CBDB-4783-8D22-3D28AF95D726}
 	EndGlobalSection
 EndGlobal
