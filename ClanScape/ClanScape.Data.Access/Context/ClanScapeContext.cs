@@ -27,6 +27,7 @@ namespace ClanScape.Data.Access.Context
             modelBuilder.Entity<Skill>().ToTable("Skills");
             modelBuilder.Entity<Name>().ToTable("Names");
             modelBuilder.Entity<AdventureLog>().ToTable("AdventureLogs");
+            modelBuilder.Entity<LastProcess>().ToTable("LastProcessed");
         }
 
         public new virtual IDbSet<T> Set<T>() where T : class
@@ -43,6 +44,7 @@ namespace ClanScape.Data.Access.Context
         public virtual IDbSet<Skill> Skills { get; set; }
         public virtual IDbSet<Name> Names { get; set; }
         public virtual IDbSet<AdventureLog> AdventureLogs { get; set; }
+        public virtual IDbSet<LastProcess> LastProcessed { get; set; }        
 
         #endregion
     }

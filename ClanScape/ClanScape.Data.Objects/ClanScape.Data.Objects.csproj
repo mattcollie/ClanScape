@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tables\AdventureLog.cs" />
+    <Compile Include="Tables\LastProcess.cs" />
     <Compile Include="Tables\Name.cs" />
     <Compile Include="Tables\Player.cs" />
     <Compile Include="Tables\Skill.cs" />
