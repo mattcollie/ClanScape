@@ -1,4 +1,5 @@
-﻿using ClanScape.Data.Access.Context;
+﻿using System;
+using ClanScape.Data.Access.Context;
 using ClanScape.Data.Objects.Tables;
 using ClanScape.Web.Api.Common.Repositories;
 using ClanScape.Web.Api.Repository.Interfaces;

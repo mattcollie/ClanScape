@@ -1,5 +1,9 @@
 ﻿using System.Data.Entity;
 using ClanScape.Data.Objects.Tables;
+using System.Threading.Tasks;
+using System.Linq;
+using System;
+using ClanScape.Common.BaseEntities;
 
 namespace ClanScape.Data.Access.Context
 {
@@ -33,6 +37,32 @@ namespace ClanScape.Data.Access.Context
         public new virtual IDbSet<T> Set<T>() where T : class
         {
             return base.Set<T>();
+        }
+        
+        public override int SaveChanges()
+        {
+            AddTimestamps();
+            return base.SaveChanges();
+        }
+
+        public override async Task<int> SaveChangesAsync()
+        {
+            AddTimestamps();
+            return await base.SaveChangesAsync();
+        }
+
+        private void AddTimestamps()
+        {
+            foreach (var entity in ChangeTracker.Entries()
+                .Where(x => x.Entity is BaseEntity && (x.State == EntityState.Added || x.State == EntityState.Modified)))
+            {
+                DateTime now = DateTime.UtcNow;
+                if (entity.State == EntityState.Added)
+                {
+                    ((BaseEntity)entity.Entity).CreatedAt = now;
+                }
+                ((BaseEntity)entity.Entity).UpdatedAt = now;
+            }
         }
 
         #endregion

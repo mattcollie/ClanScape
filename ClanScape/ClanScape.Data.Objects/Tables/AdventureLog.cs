@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ClanScape.Data.Objects.Tables
 {
     [Table("AdventureLogs")]
-    public partial class AdventureLog
+    public partial class AdventureLog : ClanScape.Common.BaseEntities.BaseEntity
     {
         [Key]
         public Guid Id { get; set; }
@@ -15,8 +15,6 @@ namespace ClanScape.Data.Objects.Tables
         public string Description { get; set; }
         
         public DateTime PubDate { get; set; }
-        
-        public DateTime CreatedAt { get; set; }
 
         public Guid PlayerId { get; set; }
 

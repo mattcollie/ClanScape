@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ClanScape.Data.Objects.Tables
 {
     [Table("SkillTypes")]
-    public partial class SkillType
+    public partial class SkillType : ClanScape.Common.BaseEntities.BaseEntity
     {
         [Key]
         public int Id { get; set; }

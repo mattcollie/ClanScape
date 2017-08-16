@@ -5,14 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ClanScape.Data.Objects.Tables
 {
     [Table("LastProcesses")]
-    public partial class LastProcess
+    public partial class LastProcess : ClanScape.Common.BaseEntities.BaseEntity
     {
         [Key]
         public Guid Id { get; set; }
         
         public DateTime Skill { get; set; }
-
-        public DateTime CreatedAt { get; set; }
 
         public Guid PlayerId { get; set; }
 

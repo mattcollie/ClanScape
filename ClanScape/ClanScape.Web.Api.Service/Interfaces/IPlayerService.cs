@@ -5,5 +5,6 @@ namespace ClanScape.Web.Api.Service.Interfaces
 {
     public interface IPlayerService : IService<Player>
     {
+        bool Add(Player item);
     }
 }

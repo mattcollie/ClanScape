@@ -42,6 +42,15 @@ namespace ClanScape.Web.Api.Common.Repositories
             return Context.Set<T>().Find(id);
         }
 
+        public bool Add(T item)
+        {
+            if (item == null) throw new ArgumentNullException(nameof(item));
+
+            Context.Set<T>().Add(item);
+
+            return SaveChanges() > 0;
+        }
+
         private int SaveChanges()
         {
             return Context.SaveChanges();

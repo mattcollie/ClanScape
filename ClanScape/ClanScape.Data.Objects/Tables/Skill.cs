@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ClanScape.Data.Objects.Tables
 {
     [Table("Skills")]
-    public class Skill
+    public class Skill : ClanScape.Common.BaseEntities.BaseEntity
     {
         [Key]
         public long Id { get; set; }

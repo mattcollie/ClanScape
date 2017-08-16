@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClanScape.Common\ClanScape.Common.csproj">
+      <Project>{7d5dcf08-8b68-47c6-a548-03fec4643540}</Project>
+      <Name>ClanScape.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClanScape.Data.Objects\ClanScape.Data.Objects.csproj">
       <Project>{3657cd77-e703-4b98-9013-ad0bba7f345b}</Project>
       <Name>ClanScape.Data.Objects</Name>

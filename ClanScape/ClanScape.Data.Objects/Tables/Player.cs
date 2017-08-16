@@ -6,14 +6,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ClanScape.Data.Objects.Tables
 {
     [Table("Players")]
-    public partial class Player
+    public partial class Player : ClanScape.Common.BaseEntities.BaseEntity
     {
         [Key]
         public Guid Id { get; set; }
         
         public int QuestPoints { get; set; }
-
-        public DateTime CreatedAt { get; set; }
         
         public ICollection<Name> Names { get; set; }
 

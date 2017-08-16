@@ -5,14 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ClanScape.Data.Objects.Tables
 {
     [Table("Names")]
-    public partial class Name
+    public partial class Name : ClanScape.Common.BaseEntities.BaseEntity
     {
         [Key]
         public long Id { get; set; }
 
         public string PlayerName { get; set; }
-
-        public DateTime CreatedAt { get; set; }
 
         public Guid PlayerId { get; set; }
 
