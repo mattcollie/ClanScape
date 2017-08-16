@@ -274,7 +274,6 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -356,13 +355,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClanScape.Common\ClanScape.Common.csproj">
+      <Project>{7d5dcf08-8b68-47c6-a548-03fec4643540}</Project>
+      <Name>ClanScape.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClanScape.Data.Access\ClanScape.Data.Access.csproj">
       <Project>{244f1a68-236c-40c3-b647-797f76a36b52}</Project>
       <Name>ClanScape.Data.Access</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClanScape.Data.Objects.Client\ClanScape.Data.Objects.Client.csproj">
-      <Project>{a0ca71b6-187b-4988-80d1-00df1c8710ef}</Project>
-      <Name>ClanScape.Data.Objects.Client</Name>
     </ProjectReference>
     <ProjectReference Include="..\ClanScape.Data.Objects\ClanScape.Data.Objects.csproj">
       <Project>{3657cd77-e703-4b98-9013-ad0bba7f345b}</Project>
@@ -371,6 +370,14 @@
     <ProjectReference Include="..\ClanScape.Web.Api.Common\ClanScape.Web.Api.Common.csproj">
       <Project>{c344e819-4711-4ee3-bad4-faaf4d8d95c8}</Project>
       <Name>ClanScape.Web.Api.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClanScape.Web.Api.Factory\ClanScape.Web.Api.Factory.csproj">
+      <Project>{611a20c1-739d-4b78-a91e-7c2948d1432b}</Project>
+      <Name>ClanScape.Web.Api.Factory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClanScape.Web.Api.Repository\ClanScape.Web.Api.Repository.csproj">
+      <Project>{2ed08f86-0376-420c-96a5-fe952652411d}</Project>
+      <Name>ClanScape.Web.Api.Repository</Name>
     </ProjectReference>
     <ProjectReference Include="..\ClanScape.Web.Api.Service\ClanScape.Web.Api.Service.csproj">
       <Project>{e07ef854-4bb3-480d-adff-8c1b5b5fb8da}</Project>

@@ -40,7 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IPlayerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\PlayerRepository.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ClanScape.Data.Access\ClanScape.Data.Access.csproj">
+      <Project>{244f1a68-236c-40c3-b647-797f76a36b52}</Project>
+      <Name>ClanScape.Data.Access</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClanScape.Data.Objects\ClanScape.Data.Objects.csproj">
+      <Project>{3657cd77-e703-4b98-9013-ad0bba7f345b}</Project>
+      <Name>ClanScape.Data.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClanScape.Web.Api.Common\ClanScape.Web.Api.Common.csproj">
+      <Project>{c344e819-4711-4ee3-bad4-faaf4d8d95c8}</Project>
+      <Name>ClanScape.Web.Api.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

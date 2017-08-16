@@ -1,21 +1,24 @@
 ﻿using System.Linq;
 using System.Web.Http;
 using ClanScape.Data.Objects.Tables;
-using ClanScape.Web.Api.Common.Interfaces.Services;
+using ClanScape.Web.Api.Factory.Interfaces;
 
 namespace ClanScape.Web.Api.Controllers
 {
     [RoutePrefix("api/player")]
-    public class PlayerController : BaseController<Player>
+    public class PlayerController : ApiController
     {
-        public PlayerController(IService<Player> service) : base(service)
+        protected IPlayerFactory PlayerFactory { get; set; }
+
+        public PlayerController(IPlayerFactory factory)
         {
+            PlayerFactory = factory;
         }
 
         [HttpGet]
-        public override IQueryable<Player> Index()
+        public IQueryable<Player> Index()
         {
-            return base.Index();
+            return PlayerFactory.All();
         }
     }
 }

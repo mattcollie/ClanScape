@@ -8,7 +8,13 @@ using ClanScape.Web.Api.Common.Helpers;
 using ClanScape.Web.Api.Common.Interfaces.Repositories;
 using ClanScape.Web.Api.Common.Interfaces.Services;
 using ClanScape.Web.Api.Common.Repositories;
+using ClanScape.Web.Api.Repository.Interfaces;
+using ClanScape.Web.Api.Repository.Repositories;
+using ClanScape.Web.Api.Service.Interfaces;
+using ClanScape.Web.Api.Service.Services;
 using ClanScape.Web.Api.Common.Services;
+using ClanScape.Web.Api.Factory.Interfaces;
+using ClanScape.Web.Api.Factory.Factories;
 using ClanScape.Data.Access.Context;
 using ClanScape.Data.Objects.Tables;
 using Microsoft.Owin;
@@ -48,8 +54,9 @@ namespace ClanScape.Web.Api
             builder.Register(c => HttpContext.Current.GetOwinContext().Authentication).InstancePerRequest();
             builder.Register(c => HttpContext.Current).InstancePerRequest();
             builder.RegisterType<ClanScapeContext>().InstancePerRequest();
-            builder.RegisterType<Service<Player>>().As<IService<Player>>().InstancePerLifetimeScope();
-            builder.RegisterType<Repository<Player>>().As<IRepository<Player>>().InstancePerLifetimeScope();
+            builder.RegisterType<PlayerRepository>().As<IPlayerRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<PlayerService>().As<IPlayerService>().InstancePerLifetimeScope();
+            builder.RegisterType<PlayerFactory>().As<IPlayerFactory>().InstancePerLifetimeScope();
         }
     }
 }
