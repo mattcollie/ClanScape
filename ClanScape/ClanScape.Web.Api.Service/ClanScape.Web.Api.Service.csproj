@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\INameService.cs" />
     <Compile Include="Interfaces\IPlayerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\NameService.cs" />
     <Compile Include="Services\PlayerService.cs" />
   </ItemGroup>
   <ItemGroup />
