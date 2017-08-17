@@ -7,6 +7,5 @@ namespace ClanScape.Web.Api.Common.Interfaces.Repositories
         IQueryable<T> All();
         T GetById(object id);
         bool Delete(object id);
-        bool Add(T item);
     }
 }

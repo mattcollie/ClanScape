@@ -5,7 +5,9 @@ namespace ClanScape.Web.Api.Service.Interfaces
 {
     public interface INameService : IService<Name>
     {
+        Name GetLatestNameByName(string name);
         bool Add(Name item);
         bool DoesNameExist(string name);
+        string GetLatestName(System.Guid playerId);
     }
 }

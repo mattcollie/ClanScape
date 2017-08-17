@@ -1,4 +1,5 @@
-﻿using ClanScape.Data.Objects.Tables;
+﻿using ClanScape.Data.Objects.Client.Dto;
+using ClanScape.Data.Objects.Tables;
 using System.Linq;
 
 namespace ClanScape.Web.Api.Factory.Interfaces
@@ -6,6 +7,7 @@ namespace ClanScape.Web.Api.Factory.Interfaces
     public interface IPlayerFactory
     {
         IQueryable<Player> All();
-        void Add(string name);
+        Player Add(string name);
+        PlayerData GetPlayer(string name);
     }
 }

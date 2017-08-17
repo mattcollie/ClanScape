@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClanScape.Web.Api.Common", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClanScape.Web.Api", "ClanScape.Web.Api\ClanScape.Web.Api.csproj", "{0F7A9EDD-C49D-4ECF-AE07-5918BE273B70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClanScape.Data.Objects.Client", "ClanScape.Data.Objects.Client\ClanScape.Data.Objects.Client.csproj", "{A0CA71B6-187B-4988-80D1-00DF1C8710EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{0F7A9EDD-C49D-4ECF-AE07-5918BE273B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F7A9EDD-C49D-4ECF-AE07-5918BE273B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F7A9EDD-C49D-4ECF-AE07-5918BE273B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0CA71B6-187B-4988-80D1-00DF1C8710EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0CA71B6-187B-4988-80D1-00DF1C8710EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0CA71B6-187B-4988-80D1-00DF1C8710EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0CA71B6-187B-4988-80D1-00DF1C8710EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,5 +91,6 @@ Global
 		{611A20C1-739D-4B78-A91E-7C2948D1432B} = {A1433585-CBDB-4783-8D22-3D28AF95D726}
 		{C344E819-4711-4EE3-BAD4-FAAF4D8D95C8} = {A1433585-CBDB-4783-8D22-3D28AF95D726}
 		{0F7A9EDD-C49D-4ECF-AE07-5918BE273B70} = {A1433585-CBDB-4783-8D22-3D28AF95D726}
+		{A0CA71B6-187B-4988-80D1-00DF1C8710EF} = {E5870DFC-6257-4425-99C2-8DB7EDBCDDA7}
 	EndGlobalSection
 EndGlobal

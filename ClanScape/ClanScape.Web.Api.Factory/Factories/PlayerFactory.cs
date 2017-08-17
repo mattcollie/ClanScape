@@ -3,6 +3,7 @@ using System.Linq;
 using ClanScape.Web.Api.Factory.Interfaces;
 using ClanScape.Web.Api.Service.Interfaces;
 using ClanScape.Data.Objects.Tables;
+using ClanScape.Data.Objects.Client.Dto;
 
 namespace ClanScape.Web.Api.Factory.Factories
 {
@@ -22,10 +23,10 @@ namespace ClanScape.Web.Api.Factory.Factories
             return PlayerSerivce.All();
         }
 
-        public void Add(string name)
+        public Player Add(string name)
         {
             if (NameService.DoesNameExist(name))
-                throw new Exception("Name already Exists");
+                return PlayerSerivce.GetById(NameService.GetLatestNameByName(name).PlayerId);
 
             Player playerItem = new Player
             {
@@ -45,6 +46,23 @@ namespace ClanScape.Web.Api.Factory.Factories
 
             if (!NameService.Add(nameItem))
                 throw new Exception("Failed to add name");
+
+            return playerItem;
+        }
+
+        public PlayerData GetPlayer(string name)
+        {
+            Player playerData = Add(name);
+
+            PlayerData player = new PlayerData
+            {
+                Id = playerData.Id,
+                QuestPoints = playerData.QuestPoints,
+                Name = NameService.GetLatestName(playerData.Id)
+            };
+
+
+            return player;
         }
     }
 }

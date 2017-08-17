@@ -45,6 +45,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClanScape.Common\ClanScape.Common.csproj">
+      <Project>{7D5DCF08-8B68-47C6-A548-03FEC4643540}</Project>
+      <Name>ClanScape.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClanScape.Data.Objects.Client\ClanScape.Data.Objects.Client.csproj">
+      <Project>{a0ca71b6-187b-4988-80d1-00df1c8710ef}</Project>
+      <Name>ClanScape.Data.Objects.Client</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClanScape.Data.Objects\ClanScape.Data.Objects.csproj">
       <Project>{3657cd77-e703-4b98-9013-ad0bba7f345b}</Project>
       <Name>ClanScape.Data.Objects</Name>

@@ -56,6 +56,8 @@ namespace ClanScape.Web.Api
             builder.RegisterType<ClanScapeContext>().InstancePerRequest();
             builder.RegisterType<PlayerRepository>().As<IPlayerRepository>().InstancePerLifetimeScope();
             builder.RegisterType<PlayerService>().As<IPlayerService>().InstancePerLifetimeScope();
+            builder.RegisterType<NameRepository>().As<INameRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<NameService>().As<INameService>().InstancePerLifetimeScope();
             builder.RegisterType<PlayerFactory>().As<IPlayerFactory>().InstancePerLifetimeScope();
         }
     }

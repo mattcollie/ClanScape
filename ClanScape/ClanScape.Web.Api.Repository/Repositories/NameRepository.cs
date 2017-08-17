@@ -21,5 +21,23 @@ namespace ClanScape.Web.Api.Repository.Repositories
                                      select g.OrderByDescending(t => t.Id).FirstOrDefault();
             return query.Any(n => n.PlayerName == name);
         }
+
+        public string GetLatestName(Guid playerId)
+        {
+            if (playerId == null) throw new ArgumentNullException(nameof(playerId));
+            IQueryable<Name> query = from n in Context.Names
+                                     group n by n.PlayerId into g
+                                     select g.OrderByDescending(t => t.Id).FirstOrDefault();
+            return query.FirstOrDefault(n => n.PlayerId == playerId)?.PlayerName;
+        }
+
+        public Name GetLatestNameByName(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentNullException(nameof(name));
+            IQueryable<Name> query = from n in Context.Names
+                                     group n by n.PlayerId into g
+                                     select g.OrderByDescending(t => t.Id).FirstOrDefault();
+            return query.FirstOrDefault(n => n.PlayerName == name);
+        }
     }
 }

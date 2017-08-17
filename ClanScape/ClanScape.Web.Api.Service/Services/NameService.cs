@@ -22,7 +22,17 @@ namespace ClanScape.Web.Api.Service.Services
 
         public bool Add(Name item)
         {
-            return Repository.Add(item);
+            return NameRepository.Add(item);
+        }
+
+        public string GetLatestName(Guid playerId)
+        {
+            return NameRepository.GetLatestName(playerId);
+        }
+
+        public Name GetLatestNameByName(string name)
+        {
+            return NameRepository.GetLatestNameByName(name);
         }
     }
 }

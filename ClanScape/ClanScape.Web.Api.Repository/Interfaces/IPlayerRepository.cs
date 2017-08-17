@@ -5,5 +5,6 @@ namespace ClanScape.Web.Api.Repository.Interfaces
 {
     public interface IPlayerRepository : IRepository<Player>
     {
+        bool Add(Player player);
     }
 }

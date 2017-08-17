@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Http;
 using ClanScape.Data.Objects.Tables;
 using ClanScape.Web.Api.Factory.Interfaces;
+using ClanScape.Data.Objects.Client.Dto;
 
 namespace ClanScape.Web.Api.Controllers
 {
@@ -23,12 +24,12 @@ namespace ClanScape.Web.Api.Controllers
         }
 
         [HttpGet]
-        [Route("add/{name}")]
-        public void Add(string name)
+        [Route("GetUser/{name}")]
+        public PlayerData GetUser(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentNullException(nameof(name));
-            PlayerFactory.Add(name);
+            return PlayerFactory.GetPlayer(name);
         }
     }
 }
