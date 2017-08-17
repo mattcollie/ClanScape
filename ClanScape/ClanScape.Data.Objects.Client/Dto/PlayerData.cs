@@ -11,6 +11,10 @@ namespace ClanScape.Data.Objects.Client.Dto
         public string Name { get; set; }
 
         public int QuestPoints { get; set; }
+        
+        public int Rank { get; set; }
+
+        public long TotalXp { get; set; }
 
         public IList<Skill> Skills { get; set; }
     }

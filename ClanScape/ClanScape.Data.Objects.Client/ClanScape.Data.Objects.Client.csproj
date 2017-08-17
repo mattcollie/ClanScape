@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Dto\PlayerData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RsDto\PlayerSkillsRsDto.cs" />
+    <Compile Include="RsDto\SkillRsDto.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

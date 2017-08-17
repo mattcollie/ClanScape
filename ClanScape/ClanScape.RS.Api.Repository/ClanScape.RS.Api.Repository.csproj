@@ -30,8 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +47,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ISkillRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\SkillRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClanScape.Common\ClanScape.Common.csproj">
+      <Project>{7d5dcf08-8b68-47c6-a548-03fec4643540}</Project>
+      <Name>ClanScape.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClanScape.Data.Objects.Client\ClanScape.Data.Objects.Client.csproj">
+      <Project>{a0ca71b6-187b-4988-80d1-00df1c8710ef}</Project>
+      <Name>ClanScape.Data.Objects.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClanScape.RS.Api.Common\ClanScape.RS.Api.Common.csproj">
+      <Project>{23bae02d-4d64-41ca-9bb7-8828f7b622f1}</Project>
+      <Name>ClanScape.RS.Api.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

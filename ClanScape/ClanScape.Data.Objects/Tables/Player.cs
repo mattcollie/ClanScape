@@ -12,6 +12,10 @@ namespace ClanScape.Data.Objects.Tables
         public Guid Id { get; set; }
         
         public int QuestPoints { get; set; }
+
+        public int Rank { get; set; }
+
+        public long TotalXp { get; set; }
         
         public ICollection<Name> Names { get; set; }
 

@@ -81,9 +81,7 @@
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Services\Service.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Factories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ClanScape.Data.Access\ClanScape.Data.Access.csproj">
       <Project>{244f1a68-236c-40c3-b647-797f76a36b52}</Project>
