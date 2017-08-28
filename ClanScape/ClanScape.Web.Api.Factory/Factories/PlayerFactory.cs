@@ -4,6 +4,9 @@ using ClanScape.Web.Api.Factory.Interfaces;
 using ClanScape.Web.Api.Service.Interfaces;
 using ClanScape.Data.Objects.Tables;
 using ClanScape.Data.Objects.Client.Dto;
+using ClanScape.RS.Api.Service.Interfaces;
+using System.Threading.Tasks;
+using ClanScape.Data.Objects.Client.RsDto;
 
 namespace ClanScape.Web.Api.Factory.Factories
 {
@@ -11,16 +14,23 @@ namespace ClanScape.Web.Api.Factory.Factories
     {
         protected IPlayerService PlayerSerivce { get; set; }
         protected INameService NameService { get; set; }
+        protected ISkillService SkillService { get; set; }
 
-        public PlayerFactory(IPlayerService playerSerivce, INameService nameService)
+        public PlayerFactory(IPlayerService playerSerivce, INameService nameService, ISkillService skillService)
         {
             PlayerSerivce = playerSerivce;
             NameService = nameService;
+            SkillService = skillService; 
         }
 
         public IQueryable<Player> All()
         {
             return PlayerSerivce.All();
+        }
+
+        public async Task<PlayerSkillsRsDto> GetStats(string name)
+        {
+            return await SkillService.Get(name);
         }
 
         public Player Add(string name)

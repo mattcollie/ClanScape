@@ -6,7 +6,7 @@
 
         public int Ranking { get; set; }
 
-        public int CurrentXP { get; set; }
+        public long CurrentXP { get; set; }
 
         public int Level { get; set; }
     }

@@ -367,6 +367,18 @@
       <Project>{3657cd77-e703-4b98-9013-ad0bba7f345b}</Project>
       <Name>ClanScape.Data.Objects</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClanScape.RS.Api.Common\ClanScape.RS.Api.Common.csproj">
+      <Project>{23bae02d-4d64-41ca-9bb7-8828f7b622f1}</Project>
+      <Name>ClanScape.RS.Api.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClanScape.RS.Api.Repository\ClanScape.RS.Api.Repository.csproj">
+      <Project>{d7cc2511-eaf9-4a7c-8771-03bd1117b654}</Project>
+      <Name>ClanScape.RS.Api.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClanScape.RS.Api.Service\ClanScape.RS.Api.Service.csproj">
+      <Project>{ff9ff10e-38a6-4bb0-9665-1d21c3390ae4}</Project>
+      <Name>ClanScape.RS.Api.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClanScape.Web.Api.Common\ClanScape.Web.Api.Common.csproj">
       <Project>{c344e819-4711-4ee3-bad4-faaf4d8d95c8}</Project>
       <Name>ClanScape.Web.Api.Common</Name>

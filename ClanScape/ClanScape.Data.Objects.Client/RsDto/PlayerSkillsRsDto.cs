@@ -6,6 +6,8 @@ namespace ClanScape.Data.Objects.Client.RsDto
     {
         public string Name { get; set; }
 
+        public int TotalLevel { get; set; }
+
         public int Rank { get; set; }
 
         public long TotalXp { get; set; }

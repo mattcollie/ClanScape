@@ -4,6 +4,8 @@ using System.Web.Http;
 using ClanScape.Data.Objects.Tables;
 using ClanScape.Web.Api.Factory.Interfaces;
 using ClanScape.Data.Objects.Client.Dto;
+using System.Threading.Tasks;
+using ClanScape.Data.Objects.Client.RsDto;
 
 namespace ClanScape.Web.Api.Controllers
 {
@@ -21,6 +23,15 @@ namespace ClanScape.Web.Api.Controllers
         public IQueryable<Player> Index()
         {
             return PlayerFactory.All();
+        }
+
+        [HttpGet]
+        [Route("GetStats/{name}")]
+        public async Task<PlayerSkillsRsDto> GetStats(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentNullException(nameof(name));
+            return await PlayerFactory.GetStats(name);
         }
 
         [HttpGet]

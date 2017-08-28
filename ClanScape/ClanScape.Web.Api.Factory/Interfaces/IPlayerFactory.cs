@@ -1,6 +1,8 @@
 ﻿using ClanScape.Data.Objects.Client.Dto;
+using ClanScape.Data.Objects.Client.RsDto;
 using ClanScape.Data.Objects.Tables;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ClanScape.Web.Api.Factory.Interfaces
 {
@@ -9,5 +11,6 @@ namespace ClanScape.Web.Api.Factory.Interfaces
         IQueryable<Player> All();
         Player Add(string name);
         PlayerData GetPlayer(string name);
+        Task<PlayerSkillsRsDto> GetStats(string name);
     }
 }
