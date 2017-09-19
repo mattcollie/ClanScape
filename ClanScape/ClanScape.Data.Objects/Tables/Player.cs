@@ -17,10 +17,10 @@ namespace ClanScape.Data.Objects.Tables
 
         public long TotalXp { get; set; }
         
-        public ICollection<Name> Names { get; set; }
+        public virtual ICollection<Name> Names { get; set; }
 
-        public ICollection<Skill> Skills { get; set; }
+        public virtual ICollection<Skill> Skills { get; set; }
 
-        public ICollection<AdventureLog> AdventureLogs { get; set; }
+        public virtual ICollection<AdventureLog> AdventureLogs { get; set; }
     }
 }

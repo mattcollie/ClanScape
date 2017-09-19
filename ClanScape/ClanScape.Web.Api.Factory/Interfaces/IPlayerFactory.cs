@@ -9,8 +9,8 @@ namespace ClanScape.Web.Api.Factory.Interfaces
     public interface IPlayerFactory
     {
         IQueryable<Player> All();
-        Player Add(string name);
-        PlayerData GetPlayer(string name);
+        Task<Player> Add(string name);
+        Task<PlayerData> GetPlayer(string name);
         Task<PlayerSkillsRsDto> GetStats(string name);
     }
 }

@@ -24,7 +24,7 @@ namespace ClanScape.Web.Api.Controllers
         {
             return PlayerFactory.All();
         }
-
+        
         [HttpGet]
         [Route("GetStats/{name}")]
         public async Task<PlayerSkillsRsDto> GetStats(string name)
@@ -36,11 +36,11 @@ namespace ClanScape.Web.Api.Controllers
 
         [HttpGet]
         [Route("GetUser/{name}")]
-        public PlayerData GetUser(string name)
+        public async Task<PlayerData> GetUser(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentNullException(nameof(name));
-            return PlayerFactory.GetPlayer(name);
+            return await PlayerFactory.GetPlayer(name);
         }
     }
 }

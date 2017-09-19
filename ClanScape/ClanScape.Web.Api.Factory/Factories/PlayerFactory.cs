@@ -33,15 +33,19 @@ namespace ClanScape.Web.Api.Factory.Factories
             return await SkillService.Get(name);
         }
 
-        public Player Add(string name)
+        public async Task<Player> Add(string name)
         {
             if (NameService.DoesNameExist(name))
-                return PlayerSerivce.GetById(NameService.GetLatestNameByName(name).PlayerId);
+                return PlayerSerivce.GetById(NameService.GetLatestPlayerByName(name).PlayerId);
+
+            PlayerSkillsRsDto playerSkills = await GetStats(name);
 
             Player playerItem = new Player
             {
                 Id = Guid.NewGuid(),
-                QuestPoints = -1
+                QuestPoints = -1,
+                Rank = playerSkills.Rank,
+                TotalXp = playerSkills.TotalXp
             };
 
             // player added successfully
@@ -60,18 +64,17 @@ namespace ClanScape.Web.Api.Factory.Factories
             return playerItem;
         }
 
-        public PlayerData GetPlayer(string name)
+        public async Task<PlayerData> GetPlayer(string name)
         {
-            Player playerData = Add(name);
-
+            Player playerData = await Add(name);
+            PlayerSkillsRsDto skills = await GetStats(name);
             PlayerData player = new PlayerData
             {
                 Id = playerData.Id,
                 QuestPoints = playerData.QuestPoints,
                 Name = NameService.GetLatestName(playerData.Id)
             };
-
-
+            
             return player;
         }
     }

@@ -30,7 +30,7 @@ namespace ClanScape.Web.Api.Service.Services
             return NameRepository.GetLatestName(playerId);
         }
 
-        public Name GetLatestNameByName(string name)
+        public Name GetLatestPlayerByName(string name)
         {
             return NameRepository.GetLatestNameByName(name);
         }
